@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'bonza/css/main.css' %}">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>{% block title %}
+
+        {% endblock %}</title>
+
+
+</head>
+<body>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Левый сайдбар (Логотип + меню) -->
+        <div class="col-lg-3">
+            <div class="sidebar text-center">
+                <!-- Логотип -->
+                <img src="{% static 'bonza/img/logo.jpg' %}" alt="Логотип Пария" width="120px" class="logo">
+
+                <!-- Меню -->
+                <h3 class="text-center">Меню</h3>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'works' %}">Работы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'payments' %}">Формы оплаты</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Блок Новости -->
+            <div class="news mt-3">
+                <h5>Новости</h5>
+                <ul class="list-unstyled">
+                    <li>📢 Новая акция на заказы!</li>
+                    <li>📅 Открытие нового филиала</li>
+                    <li>🔧 Обновление сервиса</li>
+                </ul>
+            </div>
+
+            <!-- Блок Реклама -->
+            <div class="ads mt-3">
+                <h5>Реклама</h5>
+                <p>🌟 Специальные предложения от наших партнеров!</p>
+                <img src="{% static 'bonza/img/ad.jpg' %}" alt="Реклама" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <!-- Контентная часть -->
+        <div class="col-lg-9">
+            <div class="bg-white p-4 rounded shadow">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Подключаем Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

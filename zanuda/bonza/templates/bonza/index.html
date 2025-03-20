@@ -1,0 +1,96 @@
+{% extends 'bonza/layoute.html' %}
+
+{% block title %}
+    <title>первая на джанго</title>
+{% endblock %}
+
+{% block content%}
+   <!-- Главный блок -->
+    <section class="hero">
+        <div class="container">
+            <h1>Декоративная штукатурка</h1>
+            <p class="lead">Элегантность, качество и долговечность</p>
+            <a href="#contact" class="btn btn-light btn-lg">Заказать консультацию</a>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="container mt-5">
+        <h2 class="section-title">О нашей компании</h2>
+        <p class="text-center">Мы предлагаем широкий выбор декоративных штукатурок, помогающих создать стильный и долговечный интерьер. Наши материалы безопасны, экологичны и подходят для любых помещений.</p>
+    </section>
+
+    <!-- Виды штукатурки -->
+    <section id="types" class="container mt-5">
+        <h2 class="section-title">Популярные виды</h2>
+        <div class="row">
+            <div class="col-md-4 feature-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/616/616490.png" alt="Венецианская">
+                <h4>Венецианская</h4>
+                <p>Мраморная текстура с глубиной цвета.</p>
+            </div>
+            <div class="col-md-4 feature-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/616/616489.png" alt="Травертин">
+                <h4>Травертин</h4>
+                <p>Натуральный эффект камня.</p>
+            </div>
+            <div class="col-md-4 feature-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/616/616488.png" alt="Шелковая">
+                <h4>Шелковая</h4>
+                <p>Элегантный переливающийся блеск.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="benefits" class="container mt-5">
+        <h2 class="section-title">Преимущества нашей продукции</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">✔ Устойчивость к влаге и загрязнениям</li>
+                    <li class="list-group-item">✔ Экологически чистые материалы</li>
+                    <li class="list-group-item">✔ Высокая износостойкость</li>
+                    <li class="list-group-item">✔ Разнообразие фактур и цветов</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">✔ Простота в уходе</li>
+                    <li class="list-group-item">✔ Возможность скрыть дефекты стен</li>
+                    <li class="list-group-item">✔ Долговечность и надежность</li>
+                    <li class="list-group-item">✔ Повышенная теплоизоляция</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="container mt-5 mb-5">
+        <h2 class="section-title">Свяжитесь с нами</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>📍 Адрес: Москва, ул. Декоративная, 10</p>
+                <p>📞 Телефон: +7 (900) 123-45-67</p>
+                <p>✉ Email: info@stucco-pro.ru</p>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ваш email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
