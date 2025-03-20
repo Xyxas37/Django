@@ -1,0 +1,15 @@
+{% extends 'news/layoute.html' %}
+
+{% block title %}
+    <title>{{ news.title }}</title>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>{{ news.title }}</h1>
+        <p><strong>Дата публикации:</strong> {{ news.pub_date }}</p>
+        <p><strong>Автор:</strong> {{ news.author }}</p>
+        <p>{{ news.text }}</p>
+        <a href="{% url 'news_home' %}">Назад к новостям</a>
+    </div>
+{% endblock %}

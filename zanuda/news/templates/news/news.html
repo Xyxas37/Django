@@ -1,0 +1,20 @@
+{% extends 'news/layoute.html' %}
+
+{% block title %}
+    <title>Новостная страница</title>
+{% endblock %}
+
+{% block content %}
+    <h5> Бочка с Медом </h5>
+
+    {% for new in news %}
+        <div>
+            <h3>
+                <a href="{% url 'news_detail' new.id %}">{{ new.title }}</a>
+            </h3>
+            <p> {{ new.short_description }} </p>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
